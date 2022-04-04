@@ -12,8 +12,8 @@ const Contact = (props) => {
   }, []);
 
   return (
-    <div>
-      <h1>Contact</h1>
+    <div className="contact">
+      <h1 className="title">Contact</h1>
       <h2>{data.name}</h2>
       <h2>{data.phone} </h2>
       <h2>{data.email}</h2>

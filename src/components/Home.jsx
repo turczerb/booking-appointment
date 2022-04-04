@@ -4,6 +4,7 @@ import Introduction from "./Introduction";
 import Service from "./Service";
 import Price from "./Price";
 import Contact from "./Contact";
+import BookApp from "./BookApp";
 
 const Home = (props) => {
   return (
@@ -13,6 +14,7 @@ const Home = (props) => {
       <Introduction />
       <Service />
       <Price />
+      <BookApp />
       <Contact />
     </div>
   );

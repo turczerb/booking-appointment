@@ -1,11 +1,12 @@
+@import url("https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@600&display=swap");
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  font-family: "Source Sans Pro", sans-serif;
+  font-weight: bold;
 }
 code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
-    monospace;
 }
 
 .navbar {
@@ -34,4 +35,56 @@ code {
 .welc-text {
   padding-top: 131px;
   font-size: 30px;
+}
+
+.intro {
+  margin: 50px;
+  padding: 30px;
+  text-align: center;
+  color: #666;
+  max-width: auto;
+}
+
+.title {
+  margin-bottom: 15px;
+  text-decoration: underline;
+  color: #5c4715;
+}
+
+#priceid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-gap: 45px;
+  background-image: url("./images/istockphoto.jpg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: relative;
+  color: #fff;
+}
+#serviceid {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-gap: 12px;
+}
+
+.contact {
+  color: #666;
+}
+
+.formContainer {
+  display: grid;
+  text-align: center;
+  grid-template-rows: 1fr 1fr 1fr;
+  width: 100%;
+  align-items: center;
+}
+
+.form {
+  display: grid;
+  grid-template-rows: auto;
+  max-width: 300px;
+  align-items: center;
+  text-align: center;
+  border: none;
 }

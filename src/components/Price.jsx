@@ -10,11 +10,20 @@ const Price = (props) => {
   }, []);
 
   return (
-    <div>
-      <h1>Prices</h1>
-      {data.map((item, index) => {
-        return <PriceItem key={index} name={item.name} price={item.price} />;
-      })}
+    <div className="intro">
+      <h1 className="title">Prices</h1>
+      <div className="intro" id="priceid">
+        {data.map((item, index) => {
+          return (
+            <PriceItem
+              key={index}
+              name={item.name}
+              price={item.price}
+              className="priceitem"
+            />
+          );
+        })}
+      </div>
     </div>
   );
 };

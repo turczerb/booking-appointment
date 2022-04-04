@@ -10,13 +10,19 @@ const Service = (props) => {
   }, []);
 
   return (
-    <div className="szolg">
-      <h1>Services</h1>
-      {data.map((item, index) => {
-        return (
-          <ServiceItem key={index} name={item.name} whatisit={item.whatisit} />
-        );
-      })}
+    <div className="intro">
+      <h1 className="title">Services</h1>
+      <div className="intro" id="serviceid">
+        {data.map((item, index) => {
+          return (
+            <ServiceItem
+              key={index}
+              name={item.name}
+              whatisit={item.whatisit}
+            />
+          );
+        })}
+      </div>
     </div>
   );
 };
