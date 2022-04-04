@@ -1,16 +1,33 @@
+import { useState, useEffect } from "react";
+
 const Introduction = (props) => {
-  return (
+  const [data, setData] = useState({});
+  const [showMore, setShowMore] = useState(false);
+  const [loading, setLoading] = useState(false);
+
+  useEffect(() => {
+    setLoading(true);
+    //console.log("initiating fetch");
+    fetch("https://my-salon-api.herokuapp.com/introduction")
+      .then((response) => response.json())
+      .then((data) => setData(data))
+      .then(() => {
+        setLoading(false);
+      });
+  }, []);
+
+  return showMore ? (
     <div className="intro">
-      <h1>Bemutatkozás</h1>
-      <p>
-        Lorem ipsum dolor sit amet consectetur adipisicing elit. Ullam earum
-        officiis atque doloribus officia, ipsam, possimus autem omnis aperiam,
-        voluptatum dolore consequuntur? Iste omnis minima distinctio culpa
-        doloribus eveniet ratione? Lorem ipsum dolor sit amet consectetur
-        adipisicing elit. Ullam earum officiis atque doloribus officia, ipsam,
-        possimus autem omnis aperiam, voluptatum dolore consequuntur? Iste omnis
-        minima distinctio culpa doloribus eveniet ratione?
-      </p>
+      <h1>Introduction</h1>
+      <p>{data.stroyless}</p>
+      <p>{data.storymore}</p>
+      <button onClick={() => setShowMore(!showMore)}>Show less</button>
+    </div>
+  ) : (
+    <div className="intro">
+      <h1>Introduction</h1>
+      <p>{data.stroyless}</p>
+      <button onClick={() => setShowMore(!showMore)}>Show more</button>
     </div>
   );
 };
