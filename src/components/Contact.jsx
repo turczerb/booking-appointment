@@ -1,11 +1,23 @@
+import { useState, useEffect } from "react";
+
 const Contact = (props) => {
+  const [data, setData] = useState({});
+
+  useEffect(() => {
+    //console.log("initiating fetch");
+    fetch("https://my-salon-api.herokuapp.com/contact")
+      .then((response) => response.json())
+      .then((data) => setData(data))
+      .then(() => {});
+  }, []);
+
   return (
     <div>
-      <h1>Kapcsolat</h1>
-      <h2>nagy linett</h2>
-      <h2>nagylinett@gmail.com </h2>
-      <h2>+36/30-555-55-55</h2>
-      <h2>1205 Budapest Fehér utca 42. Fsz. 1.</h2>
+      <h1>Contact</h1>
+      <h2>{data.name}</h2>
+      <h2>{data.phone} </h2>
+      <h2>{data.email}</h2>
+      <h2>{data.address}</h2>
     </div>
   );
 };
