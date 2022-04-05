@@ -2,6 +2,32 @@ import { useState } from "react";
 import DatePicker from "sassy-datepicker";
 import { TimePicker } from "sassy-datepicker";
 
+const Book = (email, date, dateHour, name, number, info) => {
+  let status = true;
+  return fetch("https://my-salon-api.herokuapp.com/appointments", {
+    method: "POST",
+    headers: {
+      "Content-type": "application/json",
+    },
+    body: JSON.stringify({ email, date, dateHour, name, number, info }), // return res.json
+  })
+    .then((res) => {
+      if (!res.ok) {
+        status = false;
+      }
+      return res;
+    })
+    .then((res) => {
+      return res.json();
+    })
+    .then((info) => {
+      if (status) {
+        return info;
+      }
+      throw info;
+    });
+};
+
 const BookApp = () => {
   const [date, setDate] = useState(new Date());
   const [dateHour, setDateHour] = useState(new Date());
@@ -43,7 +69,7 @@ const BookApp = () => {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    console.log("cs");
+    Book();
   };
 
   const minTime = { hours: 10, minutes: 0 };
@@ -82,7 +108,9 @@ const BookApp = () => {
             placeholder="other information"
             onChange={handleInfoChange}
           />
-          <button type="submit">Booking</button>
+          <button className="btn-nav" onChange={Book}>
+            Booking
+          </button>
         </form>
       </div>
     </div>

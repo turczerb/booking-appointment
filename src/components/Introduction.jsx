@@ -21,13 +21,17 @@ const Introduction = (props) => {
       <h1 className="title">Introduction</h1>
       <p>{data.stroyless}</p>
       <p>{data.storymore}</p>
-      <button onClick={() => setShowMore(!showMore)}>Show less</button>
+      <button className="btn-nav" onClick={() => setShowMore(!showMore)}>
+        Show less
+      </button>
     </div>
   ) : (
     <div className="intro">
-      <h1>Introduction</h1>
+      <h1 className="title">Introduction</h1>
       <p>{data.stroyless}</p>
-      <button onClick={() => setShowMore(!showMore)}>Show more</button>
+      <button className="btn-nav" onClick={() => setShowMore(!showMore)}>
+        Show more
+      </button>
     </div>
   );
 };

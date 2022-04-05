@@ -12,12 +12,24 @@ code {
 .navbar {
   display: flex;
   align-items: center;
-  justify-content: center;
+  justify-content: left;
   padding: 10px;
   background-color: sienna;
   color: #fff;
   flex-direction: row;
-  margin-bottom: 25px;
+  margin-bottom: 5px;
+}
+
+.btn-nav {
+  border: none;
+  margin: 5px;
+  padding: 8px;
+  justify-content: right;
+}
+
+.nav-name {
+  margin-right: 40px;
+  margin-left: 40px;
 }
 
 .welcome {

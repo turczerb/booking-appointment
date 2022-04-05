@@ -1,13 +1,11 @@
 const Nav = () => {
   return (
     <nav className="navbar">
-      <h1>SpaTime Salon</h1>
-      <button>Rólam</button>
-      <button>Szolgáltatások</button>
-      <button>Árak</button>
-      <button>Galéria</button>
-      <button>Kapcsolat</button>
-      <button>Időpontfoglalás</button>
+      <h1 className="nav-name">SpaTime Salon</h1>
+      <button className="btn-nav">About me</button>
+      <button className="btn-nav">Services</button>
+      <button className="btn-nav">Prices</button>
+      <button className="btn-nav">Contact</button>
     </nav>
   );
 };
