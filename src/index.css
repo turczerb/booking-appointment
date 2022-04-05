@@ -73,11 +73,12 @@ code {
 }
 
 .formContainer {
-  display: grid;
+  display: flex;
   text-align: center;
-  grid-template-rows: 1fr 1fr 1fr;
-  width: 100%;
+  grid-template-rows: auto;
+  margin-left: 550px;
   align-items: center;
+  gap: 40px;
 }
 
 .form {

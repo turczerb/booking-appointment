@@ -49,9 +49,9 @@ const BookApp = () => {
   const minTime = { hours: 10, minutes: 0 };
   const maxTime = { hours: 20, minutes: 0 };
   return (
-    <div className="formContainer">
+    <div>
       <h1 className="title">Book an appointment</h1>
-      <div className="datepikC">
+      <div className="formContainer">
         <DatePicker
           onChange={onChange}
           selected={date}
