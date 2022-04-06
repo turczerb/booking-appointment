@@ -1,11 +1,19 @@
+import { Anchor } from "antd";
+
+const { Link } = Anchor;
+
 const Nav = () => {
   return (
     <nav className="navbar">
       <h1 className="nav-name">SpaTime Salon</h1>
-      <button className="btn-nav">About me</button>
-      <button className="btn-nav">Services</button>
-      <button className="btn-nav">Prices</button>
-      <button className="btn-nav">Contact</button>
+
+      <Anchor targetOffset="65" className="anchor">
+        <Link href="#about" title="Introduction" className="link" />
+        <Link href="#service" title="Services" className="link" />
+        <Link href="#price" title="Prices" className="link" />
+        <Link href="#book" title="Book appointment" className="link" />
+        <Link href="#contact" title="Contact" className="link" />
+      </Anchor>
     </nav>
   );
 };

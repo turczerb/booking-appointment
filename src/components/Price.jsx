@@ -10,7 +10,7 @@ const Price = (props) => {
   }, []);
 
   return (
-    <div className="intro">
+    <div className="intro" id="price">
       <h1 className="title">Prices</h1>
       <div className="intro" id="priceid">
         {data.map((item, index) => {

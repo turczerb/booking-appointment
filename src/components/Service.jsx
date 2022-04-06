@@ -10,7 +10,7 @@ const Service = (props) => {
   }, []);
 
   return (
-    <div className="intro">
+    <div className="intro" id="service">
       <h1 className="title">Services</h1>
       <div className="intro" id="serviceid">
         {data.map((item, index) => {

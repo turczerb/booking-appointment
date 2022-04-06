@@ -6,8 +6,6 @@
   font-family: "Source Sans Pro", sans-serif;
   font-weight: bold;
 }
-code {
-}
 
 .navbar {
   display: flex;
@@ -20,11 +18,19 @@ code {
   margin-bottom: 5px;
 }
 
-.btn-nav {
+.ant-anchor {
+  display: flex;
+}
+
+.ant-anchor-link-title {
+  color: #666;
+  text-decoration: none;
+  background-color: #fff;
   border: none;
-  margin: 5px;
-  padding: 8px;
-  justify-content: right;
+  margin: 2px;
+  padding: 6px;
+  text-align: center;
+  border-radius: 10px;
 }
 
 .nav-name {
@@ -100,4 +106,9 @@ code {
   align-items: center;
   text-align: center;
   border: none;
+}
+
+.contact {
+  padding-top: 50px;
+  margin-bottom: 40px;
 }

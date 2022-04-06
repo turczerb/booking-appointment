@@ -18,7 +18,9 @@ const Introduction = (props) => {
 
   return showMore ? (
     <div className="intro">
-      <h1 className="title">Introduction</h1>
+      <h1 className="title" id="about">
+        Introduction
+      </h1>
       <p>{data.stroyless}</p>
       <p>{data.storymore}</p>
       <button className="btn-nav" onClick={() => setShowMore(!showMore)}>

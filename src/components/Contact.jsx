@@ -12,7 +12,7 @@ const Contact = (props) => {
   }, []);
 
   return (
-    <div className="contact">
+    <div className="contact" id="contact">
       <h1 className="title">Contact</h1>
       <h2>{data.name}</h2>
       <h2>{data.phone} </h2>
