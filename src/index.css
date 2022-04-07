@@ -16,6 +16,8 @@
   color: #fff;
   flex-direction: row;
   margin-bottom: 5px;
+  position: relative;
+  z-index: 110;
 }
 
 .ant-anchor {
@@ -31,6 +33,7 @@
   padding: 6px;
   text-align: center;
   border-radius: 10px;
+  visibility: visible;
 }
 
 .nav-name {

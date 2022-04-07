@@ -29,7 +29,9 @@ const Introduction = (props) => {
     </div>
   ) : (
     <div className="intro">
-      <h1 className="title">Introduction</h1>
+      <h1 className="title" id="about">
+        Introduction
+      </h1>
       <p>{data.stroyless}</p>
       <button className="btn-nav" onClick={() => setShowMore(!showMore)}>
         Show more
